@@ -1,0 +1,9 @@
+
+
+Run sequelize command inside src folder
+
+npx sequelize init
+
+npx sequelize model:generate --name Booking --attributes flightId:integer,userId:integer,status:enum,totalCost:integer
+
+npx sequelize db:migrate
