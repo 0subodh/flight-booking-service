@@ -6,6 +6,7 @@ const serverConfig = {
   DB_USER: process.env.DB_USER,
   DB_PASSWORD: process.env.DB_PASSWORD,
   DB_HOST: process.env.DB_HOST,
+  FLIGHT_SERVICE: process.env.FLIGHT_SERVICE,
 };
 
 export { serverConfig };

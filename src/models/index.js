@@ -1,4 +1,5 @@
 import { Sequelize } from "sequelize";
+import BookingModel from "./booking.js";
 
 const sequelize = new Sequelize(
   process.env.DB_NAME,
@@ -10,12 +11,15 @@ const sequelize = new Sequelize(
   }
 );
 
+const Booking = BookingModel(sequelize); // Initialize the model
+
 // CALL the function to initialize the model
 
 const db = {
   sequelize,
   Sequelize,
   // Export Actual Model
+  Booking,
 };
 
 Object.keys(db).forEach((modelName) => {

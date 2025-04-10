@@ -1,10 +1,10 @@
 "use strict";
-import { Model } from "sequelize";
+import { Model, DataTypes } from "sequelize";
 import { BOOKING_STATUS } from "../utils/index.js";
 
 const { BOOKED, CANCELLED, INITIATED, PENDING } = BOOKING_STATUS;
 
-export default (sequelize, DataTypes) => {
+export default (sequelize) => {
   class Booking extends Model {
     /**
      * Helper method for defining associations.
@@ -18,7 +18,7 @@ export default (sequelize, DataTypes) => {
   Booking.init(
     {
       flightId: { type: DataTypes.INTEGER, allowNull: false },
-      userId: { tyep: DataTypes.INTEGER, allowNull: false },
+      userId: { type: DataTypes.INTEGER, allowNull: false },
       status: {
         type: DataTypes.ENUM,
         values: [BOOKED, CANCELLED, INITIATED, PENDING],
