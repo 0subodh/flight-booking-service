@@ -1,3 +1,3 @@
-import { createBooking } from "./booking.service.js";
+import { createBooking, makePayment } from "./booking.service.js";
 
-export { createBooking };
+export { createBooking, makePayment };

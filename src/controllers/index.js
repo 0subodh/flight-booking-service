@@ -1,2 +1,2 @@
 export { info } from "./info.controller.js";
-export { createBooking } from "./booking.controller.js";
+export { createBooking, makePayment } from "./booking.controller.js";
